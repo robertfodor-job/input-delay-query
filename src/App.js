@@ -5,7 +5,7 @@ function App() {
   const [displayMessage, setDisplayMessage] = useState('');
 
   useEffect(() => {
-    const timeOutId = setTimeout(() => console.log(query), 500);
+    const timeOutId = setTimeout(() => setDisplayMessage(query), 500);
     return () => clearTimeout(timeOutId);
   }, [query]);
 
